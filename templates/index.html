@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div class="flex flex-col md:flex-row justify-center py-28 text-center space-y-5">
+        Hello, Mom!
+    </div>
+    <div>
+    {% for track in top_tracks %}
+        <div class="text-black text-lg">
+            {{track.name}}
+            {{track.preview_url}}
+            <br>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}
